@@ -6,6 +6,8 @@ namespace FigureLib.Figures
     {
         public Triangle(double size1, double size2, double size3) : base(new[] { size1, size2, size3 })
         {
+            if (size1 + size2 < size3 || size2 + size3 < size1 || size1 + size3 < size2)
+                throw new ArgumentException("Треугольника с такими сторонами не существует");
         }
 
         public override double GetArea()

@@ -8,6 +8,8 @@ namespace FigureLib.Abstracts
 
         protected Shape(double radius)
         {
+            if (radius < 0)
+                throw new ArgumentException("Радиус не должен быть меньше нуля!");
             Radius = radius;
         }
 

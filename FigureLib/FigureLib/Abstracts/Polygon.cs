@@ -8,6 +8,11 @@ namespace FigureLib.Abstracts
 
         protected Polygon(double[] sides)
         {
+            foreach (var size in sides)
+            {
+                if (size < 0)
+                    throw new ArgumentException("Каждая сторона не должна быть меньше нуля");
+            }
             Sides = sides;
         }
 
