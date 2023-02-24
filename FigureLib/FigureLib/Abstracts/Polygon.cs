@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FigureLib.Abstracts.Interfaces;
 
 namespace FigureLib.Abstracts
 {
-    public class Polygon
+    public abstract class Polygon : IFigure
     {
+        public double[] Sides { get; }
 
+        protected Polygon(double[] sides)
+        {
+            Sides = sides;
+        }
+
+        public abstract double GetArea();
     }
 }

@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FigureLib.Abstracts;
 
 namespace FigureLib.Figures
 {
-    public class Circle
+    public class Circle : Shape
     {
+        public Circle(double radius) : base(radius)
+        {
+        }
 
+        public override double GetArea()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
