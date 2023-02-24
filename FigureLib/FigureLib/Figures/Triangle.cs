@@ -10,7 +10,14 @@ namespace FigureLib.Figures
 
         public override double GetArea()
         {
-            throw new NotImplementedException();
+            var p = GetPerimeter() / 2;
+            return Math.Sqrt(p * (p - Sides[0]) * (p - Sides[1]) * (p - Sides[2]));
+        }
+
+        public bool IsRight(double eps = 1E-5)
+        {
+            Array.Sort(Sides);
+            return Math.Abs(Math.Pow(Sides[0], 2) + Math.Pow(Sides[1], 2) - Math.Pow(Sides[2], 2)) <= eps;
         }
     }
 }

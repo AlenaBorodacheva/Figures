@@ -12,5 +12,6 @@ namespace FigureLib.Abstracts
         }
 
         public abstract double GetArea();
+        public double GetPerimeter() => Sides.Sum();
     }
 }

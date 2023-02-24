@@ -10,7 +10,7 @@ namespace FigureLib.Figures
 
         public override double GetArea()
         {
-            throw new NotImplementedException();
+            return Math.PI * Math.Pow(Radius, 2);
         }
     }
 }
